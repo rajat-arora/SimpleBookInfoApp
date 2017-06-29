@@ -25,7 +25,7 @@ const argv = yargs
               description: descOptions
             })
             .command('list', 'List all books')
-            .command('read', 'Read all books', {
+            .command('read', 'Read a book\'s descriptions', {
               title: titleOptions
             })
             .command('remove', 'Remove a book', {
