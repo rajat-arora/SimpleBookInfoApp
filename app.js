@@ -6,8 +6,34 @@ const yargs = require('yargs');
 
 const book = require('./addBook.js');
 
+const titleOptions = {
+  describe: 'Title of the book',
+  demand : true,
+  alias : 't'
+};
+
+const descOptions = {
+  describe: 'Breif description of the book',
+  demand:true,
+  alias: 'desc'
+};
+
 //yargs settings.
-const argv = yargs.argv;
+const argv = yargs
+            .command('add', 'Add a new book', {
+              title: titleOptions,
+              description: descOptions
+            })
+            .command('list', 'List all books')
+            .command('read', 'Read all books', {
+              title: titleOptions
+            })
+            .command('remove', 'Remove a book', {
+              title: titleOptions
+            })
+            .help()
+            .argv;
+
 var command = argv._[0]
 
 
