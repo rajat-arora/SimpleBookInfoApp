@@ -4,7 +4,7 @@ A simple json based book info app, using node.js
 
 ## Commands
 ### Start:
-node app.js "commands"
+node app.js "commands" "options"
 
 ### Commands:
   add     Add a new book
@@ -15,8 +15,10 @@ node app.js "commands"
   
   remove  Remove a book
 
-### Options:
+### Help:
   --help  Show help
+  
+## Options
 
 ### Add
 -Adds new book
